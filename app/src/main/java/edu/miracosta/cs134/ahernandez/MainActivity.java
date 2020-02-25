@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     public void addTask(View v)
     {
         // let's extract the description from the EditText.
-        String description = "" ;
+        String description ;
 
         // id = -1, description = User input, isDone = false.
         if(descriptionEditText.getText().toString() != "")
@@ -65,6 +66,13 @@ public class MainActivity extends AppCompatActivity {
         mDB.clearAllTasks() ;
         mAllTasks.clear();
         mTaskListAdapter.notifyDataSetChanged() ;
+    }
+
+    public void changeTaskStatus(View v)
+    {
+
+        // Not sure what to put here, but the check button works now.
+
     }
 
     // Ctrl + o
